@@ -1,30 +1,41 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+    <div id="app">
+        <MyComponent>
+            <router-view />
+        </MyComponent>
+    </div>
 </template>
 
+<script lang="ts">
+import {defineComponent} from "vue";
+import MyComponent from "@/components/MyComponent.vue";
+
+export default defineComponent({
+    name: "App",
+    components: {
+        MyComponent
+    }
+});
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html,
+body,
+.page-wrapper {
+    box-sizing: border-box;
+    height: 100%;
 }
 
-#nav {
-  padding: 30px;
+body {
+    width: 100%;
+    overflox-x: hidden;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+* {
+    box-sizing: inherit;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+img {
+    display: block;
 }
 </style>
