@@ -1,0 +1,8 @@
+{
+    "tabWidth": 4,
+    "quoteProps": "consistent",
+    "bracketSpacing": false,
+    "jsxBracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "printWidth": 120
+}
